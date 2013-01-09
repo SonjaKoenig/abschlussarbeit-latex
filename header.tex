@@ -1,0 +1,108 @@
+% Fonts {{{
+\usepackage{helvet}             % Helvetica (eig. Nimbus Sans) Klon
+\usepackage[sc]{mathpazo}       % Serif Font für Texte
+\usepackage{microtype}          % Besseres Kerning, weniger Trennungen
+% }}}
+
+% Packages {{{
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{ccicons}
+
+\usepackage{natbib}
+\setcitestyle{square,numbers,comma,sort}
+% }}}
+
+% Bildunterschriften {{{
+\usepackage{caption}   % Sans-Serif Font für Bildunterschriften
+\captionsetup{labelfont={sf,bf},font=sf}
+\usepackage[sf,bf,SF]{subfigure}
+% }}}
+
+% Bilder {{{
+\usepackage{tikz}
+% }}}
+
+% Satzspiegel {{{
+\renewcommand{\baselinestretch}{1.10}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+\widowpenalty10000
+\clubpenalty10000
+% }}}
+
+% Überschriftstiefe im TOC
+\setcounter{tocdepth}{2}
+
+% Literaturverzeichnis
+\bibliographystyle{dinat}
+
+% Kopf- und Fußzeilen {{{
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\setkomafont{pagehead}{\sffamily}
+\automark[section]{chapter}
+\ohead{\headmark}
+\ofoot{\pagemark}
+\setheadsepline{.4pt}
+% }}}
+
+% Titelseite {{{
+\newlength{\titlewidth}
+\newlength{\titleoverlap}
+
+\setlength{\titleoverlap}{.5in}
+
+\setlength{\titlewidth}{2\titleoverlap}
+\addtolength{\titlewidth}{\textwidth}
+
+\setkomafont{title}{\sffamily\huge}
+
+\lowertitleback{
+\begin{tabbing}
+    \hspace*{12em} \= \kill
+
+    Fassung vom: \> \today\\
+    \\
+    \parbox{10em}{%
+    \ccbyncnd
+    }
+    \> \parbox[t]{32em}{\raggedright%
+    Diese Arbeit ist lizensiert unter der Creative Commons
+    Namensnennung-Keine kommerzielle Nutzung-Keine Bearbeitung 3.0 Deutschland 
+    Lizenz.\\[.5em]
+    Nähere Informationen finden Sie unter:
+    \url{http://creativecommons.org/licenses/by-nc-nd/3.0/de/}\\
+    oder senden Sie einen Brief an: Creative Commons, 171 Second Street, Suite 300, San
+    Francisco, California, 94105, USA.
+    }\\
+\end{tabbing}
+}
+
+% PDF Eigenschaften {{{
+\makeatletter
+\usepackage[pdftex,
+	unicode=true,
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=black,
+	urlcolor=black,
+	pdfauthor={\@author}
+]{hyperref}
+\makeatother
+% }}}
+
+% Nützliche Befehle {{{
+\newcommand{\etal}{\emph{et\,al.}}
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem{thm}{Satz}[section]
+% }}}
+
+\hyphenation{%
+Fahr-zeug-zu-In-fra-struk-tur-Kom-mu-ni-ka-ti-on
+}

@@ -1,0 +1,77 @@
+\documentclass[BCOR20mm,DIV14,twoside,10pt,headinclude,footexclude,bibtotoc,liststotoc]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\titlehead{
+\centering
+\textbf{Universität Ulm}\\
+Fakultät für Ingenieurwissenschaften und Informatik\\
+Institut für Verteilte Systeme
+}
+
+\subject{
+    Masterarbeit\\
+    \footnotesize
+    im Studiengang Medieninformatik
+}
+
+\makeatletter
+\title{Vorlage für Abschlussarbeiten} \let\thetitle\@title
+\author{Stefan Dietzel} \let\theauthor\@author
+\newcommand\matrikelnr{123456}
+\makeatother
+
+\date{
+\footnotesize vorgelegt am\\
+\normalsize 9. Januar 2013
+}
+
+\publishers{%
+\textbf{Gutachter}\\
+Gutachter 1\\
+Gutachter 2
+}
+
+\input{header}
+
+\begin{document}
+
+\frontmatter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+
+\pagestyle{scrheadings}
+
+\tableofcontents
+
+\mainmatter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{01-einleitung}
+% ...
+
+\backmatter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\null\cleardoublepage
+
+\bibliography{references}
+
+\cleardoublepage
+\clearscrheadfoot
+\ihead{Name: \theauthor}
+\ohead{Matrikelnummer: \matrikelnr}
+\ofoot{\pagemark}
+
+\minisec{Erklärung}
+
+Ich, \theauthor, Matrikelnummer \matrikelnr, erkläre, dass ich die Arbeit
+selbständig verfasst und keine anderen als die angegebenen Quellen und
+Hilfsmittel verwendet habe.
+
+\vspace{2cm}
+
+Ulm, den \dotfill
+
+\hspace{10cm} {\footnotesize \theauthor}
+
+\end{document}
